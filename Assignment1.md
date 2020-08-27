@@ -114,6 +114,8 @@ A
 
 4. Write a function with the following signature: odd_even_filter(numbers).
 To identidy an element of the list to be even, I mod the element with 2 and if the remainder is 0, it is even and I append it to a list else it would be odd and I append that to another list.
+
+The code is as follows:
 ```python
 def odd_even_filter(numbers):
     even_list = []
