@@ -1,4 +1,4 @@
-##Assignment 1
+## Assignment 1
 
 1. Write a function with the following signature: pythagoreanTheorem(length_a, length_b)
 ```python
@@ -70,12 +70,14 @@ Output of List 3:[33, 63, 93, 123, 153]
 ```
 
 3. Write a function with the following signature: grade_calc(grades_in, to_drop).
+Initially, I get the length of the list by subtracting the number of elements to frop from the length of the original list. The next step is to calculate the average of the elements left in the list. To check what grade needs to be displayed I used if...elif...else to check for the grades and I have then displayed the grades.
+
+The code is as follows:
 ```python
 def grade_calc(grades_in, to_drop):
-    # dropped lowest values
-    listVal = len(sorted(grades_in, reverse=True)) - int(to_drop)
-    average = sum(sorted(grades_in, reverse=True)[0:listVal])/listVal
-    # Grade A: 90-100 
+    listVal = len(grades_in) - int(to_drop)
+    average = int(sum(sorted(grades_in, reverse=True)[0:listVal]) / listVal)
+    # Grade A: 90-100
     if average in range(90, 101):
         grade = 'A'
     # Grade B : 80-89
@@ -92,4 +94,60 @@ def grade_calc(grades_in, to_drop):
         grade = 'F'
 
     return grade
+
+
+gradeList = [100, 95, 25, 78, 62, 45]
+print(grade_calc(gradeList, 2))
+
+gradeList = [89, 75, 35, 19, 46, 54]
+print(grade_calc(gradeList, 3))
+
+gradeList = [100, 95, 25, 78, 62, 45]
+print(grade_calc(gradeList, 4))
+```
+The output for the code above is as follows:
+```
+B
+C
+A
+```
+
+4. Write a function with the following signature: odd_even_filter(numbers).
+To identidy an element of the list to be even, I mod the element with 2 and if the remainder is 0, it is even and I append it to a list else it would be odd and I append that to another list.
+```python
+def odd_even_filter(numbers):
+    even_list = []
+    odd_list = []
+    for x in range(0, len(numbers)):
+        if numbers[x] % 2 == 0:
+            even_list.append(numbers[x])
+        else:
+            odd_list.append(numbers[x])
+
+    return even_list, odd_list
+
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+even1, odd1 = odd_even_filter(list1)
+print('List1:' + str(list1))
+print('Even:' + str(even1) + ' Odd:' + str(odd1))
+
+list2 = [3, 9, 43, 7]
+even2, odd2 = odd_even_filter(list2)
+print('List2:' + str(list2))
+print('Even:' + str(even2) + ' Odd:' + str(odd2))
+
+list3 = [71, 39, 98, 79, 5, 89, 50, 90, 2, 56]
+even3, odd3 = odd_even_filter(list3)
+print('List3:' + str(list3))
+print('Even:' + str(even3) + ' Odd:' + str(odd3))
+```
+The output for the above code is as follows:
+```
+List1:[1, 2, 3, 4, 5, 6, 7, 8, 9]
+Even:[2, 4, 6, 8] Odd:[1, 3, 5, 7, 9]
+List2:[3, 9, 43, 7]
+Even:[] Odd:[3, 9, 43, 7]
+List3:[71, 39, 98, 79, 5, 89, 50, 90, 2, 56]
+Even:[98, 50, 90, 2, 56] Odd:[71, 39, 79, 5, 89]
 ```
