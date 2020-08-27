@@ -70,7 +70,8 @@ Output of List 3:[33, 63, 93, 123, 153]
 ```
 
 3. Write a function with the following signature: grade_calc(grades_in, to_drop).
-Initially, I get the length of the list by subtracting the number of elements to frop from the length of the original list. The next step is to calculate the average of the elements left in the list. To check what grade needs to be displayed I used if...elif...else to check for the grades and I have then displayed the grades.
+
+    Initially, I get the length of the list by subtracting the number of elements to frop from the length of the original list. The next step is to calculate the average of the elements left in the list. To check what grade needs to be displayed I used if...elif...else to check for the grades and I have then displayed the grades.
 
 The code is as follows:
 ```python
@@ -113,7 +114,8 @@ A
 ```
 
 4. Write a function with the following signature: odd_even_filter(numbers).
-To identidy an element of the list to be even, I mod the element with 2 and if the remainder is 0, it is even and I append it to a list else it would be odd and I append that to another list.
+
+    To identify an element of the list to be even, I mod the element with 2 and if the remainder is 0, it is even and I append it to a list else it would be odd and I append that to another list.
 
 The code is as follows:
 ```python
