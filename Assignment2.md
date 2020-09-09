@@ -305,7 +305,7 @@ The goal of this assignment is to put you in touch with the fork-pullrequest pro
 
 4. Report your experience of making this submission, including the steps followed, commands used, and hurdles faced (within the file you created for the **Part 1**.
 ```
-
+It was a fun assignment. I faced issues in merging file as I am new to the command line but I could find my solutions to the issues on google and this has helped me understand git better.
 
 ```
 
