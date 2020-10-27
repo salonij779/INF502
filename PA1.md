@@ -1,5 +1,26 @@
 ## Project Assignment 1
 
+## Igor Feedback
+
+* Overall: It works! Some small issues: The sequences with the shifts that generate the best scores are not presented; The errors are not contextualized (I have to input everything before I get the error -- if a file does not exist, let me know right away and maybe let me retry).
+
+with a few bumps. When the sequences are exactly the same the algorithm does not capture it. The errors are captured but not treated in all cases. When an error is caught, it is shown just at the end, and the user is able to go until the end of the inputs (and it ends up not working). Moreover, the user is not able to retry. Check the comments in the code (you .py file)
+
+* Number of matches: Correct 
+* Maximum chain: Correct
+* User-input: OK. But I need to restart if there is one error (filename for example). Errors are displayed only after I input everything
+* Max Shift: OK
+* Exception handling/checks: OK
+    - Files: OK! (But just after user enters all fields)
+    - Conversions: OK.
+    - Inputs: OK... But, errors appear just after input everything (If a filename is wrong, let me know, and let me provide another file)
+    - same size, no bad chars, etc.:  OK.
+* Functions: Nice!
+
+* Variable + function names: look good
+
+* **Your grade is 95/100**
+
 # Approach:
 Initially we take filenames as inputs from the user. We then read the file and check if the length of the data received from the file is of equal length if not then it cannot be compared. I also validated for the shift to be in range (1, length(sequence)-1). Further to this if the sequence has other characters than A,C,G,T , the code mentions the error and exits the code. After all the criterias are satisfied, we go ahead and check for matches. We see what method the user has choosen and according to that we choose which method needs to be called. If user wants to do score comparison, we take the sequence input and check each character at a time and once we get for one shift I change remove the choose string from index+i and this keeps comparing with the other sequence. This is done for both the sequences and then checked for score. For contiguous score, we pass the two sequences and check for characters to match, if we get a matcg we increase the counter and check for the length of the sequence if it is less than length(sequence)-1 and the we check for next position characters if they are same. If they are we increment the ref_counter. In this way we calculate the score and print it at the end.
 
